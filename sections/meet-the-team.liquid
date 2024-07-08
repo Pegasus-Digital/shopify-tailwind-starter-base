@@ -12,17 +12,17 @@
             <img
               src='{{ member.photo | image_url: width: 500 }}'
               alt='{{ member.name }} image'
-              width='500'
               class='tw-w-40 tw-h-40 tw-rounded-full tw-mx-auto tw-transition-all tw-duration-500 tw-object-cover tw-border tw-border-solid tw-border-transparent tw-group-hover:tw-border-indigo-600'
-              width='{{ collection.image.width }}'
-              height='{{ collection.image.height }}'
+              width='{{  member.photo.width }}'
+              height='{{  member.photo.height }}'
             >
           </div>
+
           <h4 class='tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-2 tw-capitalize tw-text-center tw-transition-all tw-duration-500 tw-group-hover:tw-text-indigo-600'>
             {{ member.name }}
           </h4>
           <span class='tw-text-gray-500 tw-text-center tw-block tw-transition-all tw-duration-500 tw-group-hover:tw-text-gray-900'>
-            {{- member.fields.title -}}
+            {{- member.title -}}
           </span>
         </div>
       {% endfor %}
@@ -47,7 +47,7 @@
   ],
   "presets": [
     {
-      "name": "Team"
+      "name": "Meet The Team"
     }
   ]
 }
